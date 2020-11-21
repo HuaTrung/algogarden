@@ -17,17 +17,13 @@ const DividerExampleHorizontalTable = () => (
     <Grid.Row stretched>
     <Grid.Column width={11}>
       <Segment>
-        <div id="app" class="container">
-            <CardPortfolio header="Trees" content="Lorem ipsum dolor sit amet, consectetur adipisicing elit." 
+        <div id="app" class="container" style={{boxSizing: "content-box"}}>
+            <CardPortfolio header="Convex Hull" content="Lorem ipsum dolor sit amet, consectetur adipisicing elit." 
             image="https://images.unsplash.com/photo-1479659929431-4342107adfc1?dpr=2&auto=compress,format&fit=crop&w=1199&h=799&q=80&cs=tinysrgb&crop=">
              
             </CardPortfolio>
-            <CardPortfolio header="Trees" content="Lorem ipsum dolor sit amet, consectetur adipisicing elit." 
+            <CardPortfolio header="Shakespeare Monkey" content="Lorem ipsum dolor sit amet, consectetur adipisicing elit." 
             image="https://images.unsplash.com/photo-1479644025832-60dabb8be2a1?dpr=2&auto=compress,format&fit=crop&w=1199&h=799&q=80&cs=tinysrgb&crop=">
-              <h1 slot="header">Trees</h1>
-              <p slot="content">
-                Lorem ipsum dolor sit amet, consectetur adipisicing elit.
-              </p>
             </CardPortfolio>
           </div>
         </Segment>
