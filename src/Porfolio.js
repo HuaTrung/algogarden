@@ -8,10 +8,16 @@ import {
   Search,
   Segment,
 } from "semantic-ui-react";
+import {
+    BrowserRouter as Router,
+    Switch,
+    Route,
+    Link
+  } from "react-router-dom";
 // import Filterizr from 'filterizr';
 import CardPortfolio from "./component/CardPortfolio";
 import anime from 'animejs/lib/anime.es.js';
-
+import App from './App.js'
 class Portfolio extends React.Component {
     constructor(props) {
       super(props);
@@ -80,6 +86,14 @@ class Portfolio extends React.Component {
                 
                 {/* |(MGarden</h1> */}
               <div id="app" className="container" style={{ boxSizing: "content-box" }}>
+              <Router>
+              <Switch>
+                <Route exact path="/shoot-airplane">
+                    
+                    <App />
+                </Route>
+               
+                </Switch>
                 <CardPortfolio
                   header="Convex Hull"
                   content="Lorem ipsum dolor sit amet, consectetur adipisicing elit."
@@ -91,10 +105,12 @@ class Portfolio extends React.Component {
                   image="https://scontent.fsgn2-2.fna.fbcdn.net/v/t1.0-9/119455931_3821712097857035_3938507418574807443_o.jpg?_nc_cat=111&ccb=2&_nc_sid=0debeb&_nc_ohc=YEChnZMkU38AX-mtZUC&_nc_ht=scontent.fsgn2-2.fna&oh=ee3d6fcb3c7da7f28226ea1f54b1f096&oe=5FDFD795"
                 ></CardPortfolio>
                 <CardPortfolio
-                  header="Shakespeare Monkey"
+                link="/shoot-airplane"
+                  header="Airplane Shooting"
                   content="Lorem ipsum dolor sit amet, consectetur adipisicing elit."
                   image="https://scontent.fsgn2-3.fna.fbcdn.net/v/t1.0-9/117711727_3737131362981776_3976506613262938381_o.jpg?_nc_cat=108&ccb=2&_nc_sid=0debeb&_nc_ohc=fFyL41Y9_uwAX851QIT&_nc_ht=scontent.fsgn2-3.fna&oh=9377c6b97cc713c1396fdfafd737a0c6&oe=5FDEA11A"
                 ></CardPortfolio>
+                    </Router>
               </div>
             </Grid.Column>
             <Grid.Column width={4} textAlign="center">

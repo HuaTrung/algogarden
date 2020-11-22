@@ -1,12 +1,12 @@
 import "./Porfolio.css";
 // import "./stylesheets/metro-panel.css";
 import TileView from "./component/TileView"
-import icon_service from './assets/images/icons/03.png';
-import icon_me from './assets/images/icons/01.png';
-import icon_porfolio from './assets/images/icons/06.png';
-import icon_testimonials from './assets/images/icons/02.png';
-import icon_profile from './assets/images/icons/04.png';
-import icon_contact from './assets/images/icons/05.png';
+import icon_service from './assets/icons/03.png';
+import icon_me from './assets/icons/01.png';
+import icon_porfolio from './assets/icons/06.png';
+import icon_testimonials from './assets/icons/02.png';
+import icon_profile from './assets/icons/04.png';
+import icon_contact from './assets/icons/05.png';
 
 
 function App() {

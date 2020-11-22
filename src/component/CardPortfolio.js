@@ -1,6 +1,11 @@
 import React from "react";
 import "../Porfolio.css";
-
+import {
+  BrowserRouter as Router,
+  Switch,
+  Route,
+  Link
+} from "react-router-dom";
 class CardPortfolio extends React.Component {
   constructor(props) {
     super(props);
@@ -60,7 +65,8 @@ class CardPortfolio extends React.Component {
             }}
           ></div>
           <div class="card-info">
-            <h1>{this.props.header}</h1>
+          <Link to={this.props.link}><h1>{this.props.header}</h1></Link>
+            
             <p >
             {this.props.content}
             </p>
