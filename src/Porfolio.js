@@ -17,47 +17,37 @@ class Portfolio extends React.Component {
       super(props);
     }
     componentDidMount() {
-        var opac = anime({
-            targets: '.name .letter',
+        var opac = 
+        anime.timeline({loop: false})
+        .add({
+          targets: '.name .letter',
           opacity: [0,1],
           easing: "easeOutSine",
           duration: 1000,
-          keyframes: [
-                    {display: 'block' }, // start frame
-                    {display: 'none'}, // end frame
-                ],
-          delay: (el, i) => 150 * (i+1),
-        //   function(){$(this).addClass('hideAway')}
+          delay: (el, i) => 150 * (i+1)
+        })
+        .add({
+            targets: '.name .letterremove',
+            opacity: [1,0],
+            easing: "easeOutSine",
+            duration: 500,
+            rotateY: 45,
+            delay: (el, i) => 150 * (i+1),
+            complete: function(){
+                var x = document.querySelectorAll(".letterremove");
+                for (var i = 0; i < x.length; i++) {
+                  x[i].style.display='none';
+                }
+            }
+          })
+        .add({
+            targets: '.name .letterlast',
+            opacity: [0,1],
+            easing: "easeOutSine",
+            duration: 500,
+            rotateY: [-90,0],
+            delay: (el, i) => 150 * (i+1)
           });
-          
-        // anime.timeline({loop: false})
-        // .add({
-        //   targets: '.name .letter',
-        //   opacity: [0,1],
-        //   easing: "easeOutSine",
-        //   duration: 1000,
-        //   delay: (el, i) => 150 * (i+1)
-        // })
-        // .add({
-        //     targets: '.name .letterremove',
-        //     opacity: [1,0],
-        //     easing: "easeOutSine",
-        //     duration: 500,
-        //     rotateY: 45,
-        //     keyframes: [
-        //         {display: 'block' }, // start frame
-        //         {display: 'none'}, // end frame
-        //     ],
-        //     delay: (el, i) => 150 * (i+1)
-        //   })
-        // .add({
-        //     targets: '.name .letterlast',
-        //     opacity: [0,1],
-        //     easing: "easeOutSine",
-        //     duration: 500,
-        //     rotateY: [-90,0],
-        //     delay: (el, i) => 150 * (i+1)
-        //   });
     }
     render(){
         return(<Segment padded style={{ backgroundColor: "#BDAAA4" }}>
@@ -85,6 +75,7 @@ class Portfolio extends React.Component {
                 <div className="letterlast">d</div>
                 <div className="letterlast">e</div>
                 <div className="letterlast">n</div>
+                <div className="letterlast">]</div>
             </div>
                 
                 {/* |(MGarden</h1> */}
