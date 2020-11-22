@@ -159,9 +159,9 @@ body {
   transition: all .3s ease;
 }
 
-* {
+/* * {
   box-sizing: border-box;
-}
+} */
 
 main {
   --neutralShade1: #f2f2f2;
