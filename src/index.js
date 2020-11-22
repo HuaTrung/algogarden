@@ -3,6 +3,7 @@ import ReactDOM from 'react-dom';
 import Portfolio from './Porfolio';
 import reportWebVitals from './reportWebVitals';
 import 'semantic-ui-css/semantic.min.css'
+import './assets/fonts/HelloDaisy.ttf'; 
 
 ReactDOM.render(
   <React.StrictMode>
