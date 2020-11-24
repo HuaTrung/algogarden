@@ -65,7 +65,7 @@ class CardPortfolio extends React.Component {
             }}
           ></div>
           <div class="card-info">
-          <Link to={this.props.link}><h1>{this.props.header}</h1></Link>
+          <h1>{this.props.header}</h1>
             
             <p >
             {this.props.content}

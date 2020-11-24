@@ -4,10 +4,22 @@ import Portfolio from './Porfolio';
 import reportWebVitals from './reportWebVitals';
 import 'semantic-ui-css/semantic.min.css'
 import './assets/fonts/HelloDaisy.ttf'; 
+import { BrowserRouter as Router, Switch, Route, Link } from "react-router-dom";
+import App from './App';
+import Airplane from './Airplane';
 
 ReactDOM.render(
-  <React.StrictMode>
-    <Portfolio />
+  <React.StrictMode>  
+   <Router>
+      <Switch>
+        <Route path="/" exact>
+          <Portfolio />
+        </Route>
+        <Route exact path="/shoot-airplane">  
+          <Airplane />
+        </Route>
+      </Switch>
+    </Router>
   </React.StrictMode>,
   document.getElementById('root')
 );

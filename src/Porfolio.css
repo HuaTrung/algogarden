@@ -961,14 +961,14 @@ footer.dark, footer.dark a {
 section {
   align-self: end;
 }
-body .name {
+body .name-label {
   display: -webkit-box;
   display: flex;
   margin: auto;
   padding: 0 1rem 1rem;
   position: relative;
 }
-body .name .letter {
+body .name-label .letter {
   opacity: 0;
   -webkit-transform: scale(0.9);
           transform: scale(0.9);

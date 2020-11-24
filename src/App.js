@@ -1,5 +1,5 @@
-import "./Porfolio.css";
-// import "./stylesheets/metro-panel.css";
+import "./App.css";
+import "./stylesheets/metro-panel.css";
 import TileView from "./component/TileView"
 import icon_service from './assets/icons/03.png';
 import icon_me from './assets/icons/01.png';
