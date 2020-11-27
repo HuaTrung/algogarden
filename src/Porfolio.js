@@ -1,14 +1,9 @@
 import React from "react";
 import {
-  Button,
-  Divider,
   Grid,
-  Header,
-  Icon,
-  Search,
   Segment,
 } from "semantic-ui-react";
-import { BrowserRouter as Router, Switch, Route, Link } from "react-router-dom";
+import { BrowserRouter as  Link } from "react-router-dom";
 // import Filterizr from 'filterizr';
 import CardPortfolio from "./component/CardPortfolio";
 import anime from "animejs/lib/anime.es.js";
